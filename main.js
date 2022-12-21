@@ -70,11 +70,8 @@ for (let i = 0; i < 10; i++) {
   arrayNum.push(Math.floor(Math.random() * 11));
 }
 
-function sum(arrayNum) {
-  if (!arrayNum.length) {
-    return 0;
-  }
-  return arrayNum[0] + sum(arrayNum.slice(1));
+function sum(arr) {
+    return (!arr.length) ? 0 : arr[0] + sum(arr.slice(1))
 }
 
 console.log(sum(arrayNum));
